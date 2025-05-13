@@ -1,3 +1,4 @@
+import random
 """Takrorlanuvchi Algoritmlash 
 Boshlang'ich bosqich
 """
@@ -678,4 +679,254 @@ m = int(input("Son kiriting:>>> "))
 """# 1 - misol
 n = int(input("Son kirting:>>> "))
 """
-# 2 - misol
+# # 4 - misol
+# for i in range(10,100):
+#     if i // 10 == i % 10:
+#         print(i , end=", ")
+
+# # 5 - misol
+# for i in range(100):
+#     i = i ** 2
+#     if i // 10 == i % 10 and 100 > i >=10:
+#         print(i , end=", ")
+#     if 1000 > i > 99 and i // 100 == i % 10:
+#         print(i, end=", ")
+#     if 10_000 > i > 999 and i // 1000 == i % 10 and (i - (i // 1000) * 1000) // 100 == (i // 10) % 10:
+#         print(i, end=", ") 
+
+# # 6 - misol
+# sonlar = []
+# summa = []
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j == 0:
+#         break
+#     if j > 0:
+#         summa.append(j)
+# print(sum(summa))
+
+# # 7 - misol
+# sonlar = []
+# summa = []
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j == 0:
+#         break
+#     if j < 0:
+#         summa.append(j)
+# print(sum(summa))
+
+# # 8 - misol
+# sonlar = []
+# summa = 1
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j < 0:
+#         break
+#     summa *= j
+# print(summa)
+
+# # 9 - misol
+# sonlar = []
+# summa = 1
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j == 0:
+#         break
+#     summa *= j
+# print(summa)
+
+# # 10 - misol
+# n = int(input("Natural son kiriting:>>> "))
+# boluvchilar = 0
+# print("{} = ".format(n), end="")
+# for i in range(1, n):
+#     if n % i == 0:
+#         boluvchilar += i
+#         print(i, end=" + ")
+# print()
+# if boluvchilar == n:
+#     print("{} haqiqiy son".format(n))
+# else:
+#     print("{} haqiqiy son emas".format(n))
+
+# 11 - misol
+"""9 bilan bir xil"""
+
+# # 12 - misol
+# sonlar = []
+# interval = []
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j == 0:
+#         break
+#     if -5 < j < 5:
+#        interval.append(j) 
+# print(interval)
+
+# # 13 - misol
+# sonlar = []
+# interval = []
+# for i in range(10):
+#     sonlar.append(int(input("Son kiriting:>>> ")))
+# for j in sonlar:
+#     if j < 0:
+#         break
+#     if 3 < j < 13:
+#        interval.append(j) 
+# print(interval)
+
+# # 14 - misol
+# n = int(input("Son kiriting:>>> "))
+# m = int(input("Son kiriting:>>> "))
+# summa = 0
+# for i in range(1, n):
+#     for j in range(m):
+#         i *= i
+#     summa += i
+# print(summa)
+
+# # 15 - misol
+# n = int(input("Son kiriting:>>> "))
+# a, b = 1, 1
+# print(a, end=", ")
+# while b < n:
+#     print(b, end=", ")
+#     a, b = b, a+b
+
+# # # 16 - misol
+# a = int(input("Stipendiyangiz miqdorini kiriting:>>> "))
+# b = int(input("Oylik xarajatlar:>>> "))
+# for i in range(10):
+#     delta += b - a 
+#     b += b * 0.03
+# delta += b-a
+# print("Mablag' = ", delta)
+# print("Stipendiya umumiy miqdori = ", a * 10)
+
+# # 17 - misol
+# s = int(input("Student jamg'armasi:>>> "))
+# a = int(input("Har oylik stipendiya:>>> "))
+# b = int(input("Oylik xarajatlar:>>> "))
+# delta = b - a
+# for i in range(1, 10):
+#     b += b * 0.03
+#     delta += b - a
+#     s -= delta
+#     if s <= 0:
+#         print("Talaba {} oy yashay oladi".format(i))
+
+# # 18 - misol
+# depozit = int(input("Depozit summasini kiriting:>>> "))
+# depozit_muddati = int(input("Depozit muddatini kiriting(yillarda):>>> "))
+# summa = depozit
+# for i in range(depozit_muddati - 1):
+#     depozit += depozit * 0.06
+#     summa = depozit
+# print("{} muddatda depozit {} aylanadi".format(depozit_muddati, summa))
+
+# # 19 - misol
+# n = int(input("n sonini kiriting (n < 9999): "))
+# m = int(input("m sonini kiriting: "))
+# yigindi = 0
+# soni = 0
+# while n > 0 and soni < m:
+#     raqam = n % 10
+#     yigindi += raqam
+#     n = n // 10
+#     soni += 1
+# print("Oxirgi", m, "ta raqam yig'indisi:", yigindi)
+
+# # 20 - misol
+# for i in range(1000,10000):
+#   birinchi_xona = i // 1000
+#   ikkinchi_xona = (i // 100) % 10
+#   uchunchi_xona = (i // 10) % 10
+#   tortinchi_xona = i % 10
+#   if birinchi_xona == ikkinchi_xona or birinchi_xona == uchunchi_xona or birinchi_xona == tortinchi_xona or ikkinchi_xona == uchunchi_xona or ikkinchi_xona == tortinchi_xona or uchunchi_xona == tortinchi_xona:
+#     print(end="")
+#   else:
+#     print(i, end=", ")
+
+# # 21 - misol
+# n = int(input("Son kiriting:>>> "))
+# boluvchilar = 0
+# print(f"{n} = ", end="")
+# if 1000 > n > 99:
+#   for j in range(2, int(n/2)):
+#       if n % j == 0:
+#         boluvchilar += j ** 3
+#         print(f"{j} ^ 3" , end=" + ")
+# elif 999 < n < 10_000:
+#   for i in range(2, int(n/2)):
+#     if n % i == 0:
+#       boluvchilar += i ** 3
+#       print(f"{i} ^ 3" , end=" + ")
+# else:
+#   print("Uchxonali yoki to'rtxonali son kiriting!")
+# print()
+# if boluvchilar == n:
+#     print("{} soni Armstrong".format(n))
+# else:
+#     print("{} soni Armstrong soni emas".format(n))
+
+# # 22 - misol
+# ball = 0
+# for i in range(10):
+#   a = random.randrange(1,10)
+#   b = random.randrange(1,10)
+#   print(f"{a} * {b} = ", end="")
+#   c = int(input())
+#   if a * b == c:
+#     ball += 1
+# print()
+# if ball == 10:
+#   print("A'lo")
+# elif ball == 9 or ball == 8:
+#   print("Yaxshi")
+# elif ball == 7 or ball == 6:
+#   print("Qoniqarli")
+# else:
+#   print("Yomon")
+
+# # 23 - misol
+# count = 0
+# for i in range(1, 1000):
+#   for j in range(1, 501):
+#     if i % j == 0:
+#       count += 1
+#   if count == 5:
+#     print(i, end=", ")
+
+# # 24 - misol
+# for son in range(1, 10000):
+#     if son % 7 == 0:  
+#         yigindi = 0
+#         n = son
+#         while n > 0:
+#             raqam = n % 10
+#             yigindi += raqam
+#             n = n // 10
+#         if yigindi % 7 == 0:
+#             print(son , end=", ")
+
+# # 25 - misol 
+# # Foydalanuvchidan natural sonni olish
+# n = int(input("Natural son kiriting: "))
+# # Har bir raqam (0 dan 9 gacha) necha marta uchraganini saqlash uchun ro'yxat
+# sanoq = [0] * 10  # 10 ta raqam uchun boshlang‘ich qiymatlar: [0, 0, ..., 0]
+# # Raqamlarni bitta-bitta ajratib chiqamiz
+# while n > 0:
+#     raqam = n % 10        # Oxirgi raqamni olish
+#     sanoq[raqam] += 1      # Shu raqamni sanash
+#     n = n // 10            # Oxirgi raqamni olib tashlash
+# # Natijani chiqarish
+# for i in range(10):
+#     if sanoq[i] > 0:
+#         print(f"{i} raqami {sanoq[i]} marta uchradi.")
+
